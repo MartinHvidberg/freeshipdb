@@ -1,7 +1,14 @@
 
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-from bs4 import BeautifulSoup
+#from bs4 import bs
+
+import ship_info_extractors as sie
+
+def extract_shipinfo(str_url, soup):
+    if "vesseltracker" in str_url:
+        dic_shipinfo = sie.esi_vt(r.data)
+    return dic_shipinfo
 
 with open("sites.csv", "r") as fils:
     lst_sites = fils.readlines()
@@ -14,17 +21,16 @@ print(str_url)
 
 http = urllib3.PoolManager()
 r = http.request('GET', str_url)
-print(r.status)
-#200
-soup = BeautifulSoup(r.data, 'html.parser')
+if r.status == 200:
+    dic_shipinfo = extract_shipinfo(str_url, r.data)
+    print(dic_shipinfo)
+    with open(str(mmsi)+'.eci', 'w') as filo:
+        filo.write(str(dic_shipinfo))
+else:
+    print("Request returned error: {} for {}".format(r.status, str_url))
 
-mydivs = soup.findAll("div", {"class": "row"})
-keyval = soup.find("div", "key-value-table")
-print(str(type(keyval)), keyval)
-for desn in keyval.descendants:
-    print('\n', desn)
-#imo = keyval.findnext('div', "key")
-#print(imo)
 
-with open('7116808.html', 'w') as filo:
-    filo.write(str(soup))
+###
+
+    #with open("sample.html", "w") as fils:
+    #    fils.writelines(str(r.data))
