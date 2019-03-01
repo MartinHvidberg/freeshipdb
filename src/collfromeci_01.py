@@ -20,7 +20,7 @@ except (Exception, psycopg2.Error) as error:
     print("Error while connecting to PostgreSQL", error)
     sys.exit(999)
 
-root_dir = r"../data/eci/7/"
+root_dir = r"../data/eci/8/"
 
 cnt = 0
 lst_k = list()
