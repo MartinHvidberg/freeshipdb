@@ -4,6 +4,7 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 from bs4 import BeautifulSoup as bs
 
+URL_START = r"www.shipnumber.com/"
 LST_KEYT = ['IMO number', 'MMSI', 'Vessel Name', 'Call Sign', 'Vessel Type',
             'flag', 'Gross Tonnage', 'Size', 'Year', 'update time']
 HEADER = "IMO number,MMSI,Vessel Name,Call Sign,Vessel Type," \
@@ -37,13 +38,14 @@ def scrape_shipnumber_page(str_url, dic_ships):
         print("No table found on page: {}".format())
 
     # Harves Next
-    str_next = ""
+    str_a_next = [tok for tok in soup.findAll('a') if tok.text == 'next'][0]
+    str_next = str_url.rsplit('/', 1)[0] + '/' + str_a_next.get('href')
 
     return str_next, dic_ships
 
 if __name__ == '__main__':
 
-    str_url = r"www.shipnumber.com/"
+    str_url = URL_START
     http = urllib3.PoolManager()
     # Open out file and write header
     with open(STR_FILO, 'w') as filo:
@@ -57,7 +59,7 @@ if __name__ == '__main__':
                 for keyt in LST_KEYT:
                     str_ship = str_ship + dic_ships[keys][keyt] + ', '
                 str_ship = str_ship.strip().strip(',')
-                print("|{}|".format(str_ship))
+                #print("|{}|".format(str_ship))
                 filo.write(str_ship+'\n')
 
 
