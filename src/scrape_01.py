@@ -18,7 +18,7 @@ for site in lst_sites:
     site1 = [tok.strip().replace('"','') for tok in site.split(',')]
     print(" site: {}".format(site1))
 
-    lst_targets = range(3000000, 3999999) # [7116808] #
+    lst_targets = range(4000000, 4999999) # [7116808] #
 
     for imo in lst_targets:
         # Check IMO check-digit nnnnnnP

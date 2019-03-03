@@ -4,7 +4,7 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 from bs4 import BeautifulSoup as bs
 
-URL_START = r"www.shipnumber.com/"
+URL_START = r"http://www.shipnumber.com/"
 LST_KEYT = ['IMO number', 'MMSI', 'Vessel Name', 'Call Sign', 'Vessel Type',
             'flag', 'Gross Tonnage', 'Size', 'Year', 'update time']
 HEADER = "IMO number,MMSI,Vessel Name,Call Sign,Vessel Type," \
@@ -38,8 +38,12 @@ def scrape_shipnumber_page(str_url, dic_ships):
         print("No table found on page: {}".format())
 
     # Harves Next
-    str_a_next = [tok for tok in soup.findAll('a') if tok.text == 'next'][0]
-    str_next = str_url.rsplit('/', 1)[0] + '/' + str_a_next.get('href')
+    try:
+        str_a_next = [tok for tok in soup.findAll('a') if tok.text == 'next'][0]
+        str_next = str_url.rsplit('/', 1)[0] + '/' + str_a_next.get('href')
+    except IndexError as e:
+        print("Seems we have reached the last page - no more 'next")
+        str_next = None
 
     return str_next, dic_ships
 
