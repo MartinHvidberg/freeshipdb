@@ -22,11 +22,15 @@ def scrape_shipspot_imagepage(str_url, dic_ship):
                 if ('Technical Data' in itm.text
                 and 'inbox_title' in str(itm))]
     if lst_tbls and len(lst_tbls) > 0:
-        for tbl in lst_tbls:
-            for itbl in tbl.findAll('table'):
-                print("# {} {} _ {}".format(str(type(itbl)), len(itbl), len(itbl.find_parents("table"))))#tbl.prettify()))
-                if '24,785' in itbl.text:
-                    print("###")
+
+
+
+
+        # for tbl in lst_tbls:
+        #     for itbl in tbl.findAll('table'):
+        #         print("# {} {} _ {}".format(str(type(itbl)), len(itbl), len(itbl.find_parents("table"))))#tbl.prettify()))
+        #         if '24,785' in itbl.text:
+        #             print("###")
 
 
     print("*******************")
