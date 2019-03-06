@@ -1,0 +1,25 @@
+
+
+****** By IMO: *************
+
+https://www.balticshipping.com/vessel/imo/7314199
+http://www.shipnumber.com/page-1.html
+
+https://gisis.imo.org/Public/SHIPS/ShipDetails.aspx?IMONumber=9501916
+http://www.shipspotting.com/ships/ship.php?imo=5383304
++++ http://www.shipspotting.com/gallery/photo.php?lid=2974699  (more info on img-page!)
+
+
+****** By MMSI: *************
+
+?
+
+
+
+****** DB: *************
+
+user="mh",
+password="dillerdaller",
+host="127.0.0.1",
+port="5432",
+database="snaps"

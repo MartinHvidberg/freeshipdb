@@ -1,7 +1,6 @@
 
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-#from bs4 import bs
 
 import ship_info_extractors as sie
 
@@ -18,7 +17,7 @@ for site in lst_sites:
     site1 = [tok.strip().replace('"','') for tok in site.split(',')]
     print(" site: {}".format(site1))
 
-    lst_targets = range(4000000, 4999999) # [7116808] #
+    lst_targets = range(1000000, 9999999) # [7116808] #
 
     for imo in lst_targets:
         # Check IMO check-digit nnnnnnP
