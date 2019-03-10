@@ -3,12 +3,16 @@ import sys
 
 import psycopg2
 
+import ecpw  # The EC-password module (local copy)
+ecs = ecpw.Store()
+db_ip, db_name, db_pw = ecs.gets('PostgreSQL_mh', ['ip', 'name', 'password'])
+
 try:
-    connection = psycopg2.connect(user="mh",
-                                  password="***",
-                                  host="127.0.0.1",
+    connection = psycopg2.connect(user=db_name,
+                                  password=db_pw,
+                                  host=db_ip,
                                   port="5432",
-                                  database="snaps")
+                                  database="geoint")
     cursor = connection.cursor()
     # Print PostgreSQL Connection properties
     print("WHOAMI: {}".format(connection.get_dsn_parameters()))
@@ -20,14 +24,14 @@ except (Exception, psycopg2.Error) as error:
     print("Error while connecting to PostgreSQL", error)
     sys.exit(999)
 
-root_dir = r"../data/eci/8/"
+root_dir = r"../data/eci/" # 3/
 
-cnt = 0
+cnt_good, cnt_total = 0, 0
 lst_k = list()
 for r, d, f in os.walk(root_dir):
     for fil in f:
         if ".eci" in fil:
-            str_ffn =os.path.join(r, fil)
+            str_ffn = os.path.join(r, fil)
             # Read the data
             with open(str_ffn, 'r') as fil_eci:
                 dat_eci = fil_eci.readlines()
@@ -79,14 +83,17 @@ for r, d, f in os.walk(root_dir):
                 str_keys = str_keys.replace("length", "shiplength")
                 str_keys = str_keys.replace("width", "shipwidth")
                 str_vals = str(lst_vals).strip("[]")
-                sql = "INSERT INTO ais.scrp_vestra({}) VALUES({});".format(str_keys, str_vals)
-                print("SQL: {}".format(sql))
+                sql = "INSERT INTO ais.vestra_scrp({}) VALUES({});".format(str_keys, str_vals)
+                ##print("SQL: {}".format(sql))
                 cursor.execute(sql)
                 connection.commit()
 
-                cnt += 1
+                cnt_good += 1
+            else:
+                print("Bummer! No IMO found in file: {} << {}".format(str_ffn, dat_eci[0].strip()))
+        cnt_total += 1
 
-print("processed .eci files: {}".format(cnt))
+print("processed {} good .eci files of total {}".format(cnt_good, cnt_total))
 
 # closing database connection.
 if (connection):
