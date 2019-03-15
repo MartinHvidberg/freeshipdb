@@ -1,4 +1,10 @@
+****** scrapes *************
 
+scrape_01:	www.vesseltracker.com/en/Ships/  +89.000
+scrape_01b	https://www.vesseltracker.com/en/vessels.html?search=A follow links... *NOTRUN*
+scrape_02:	http://www.shipnumber.com/  +302.000
+scrape_03:	https://www.balticshipping.com/vessel/imo/9060730 *NOTRUN* many details
+scrape_04:	http://www.shipspotting.com/ships/ship.php?imo=9681895 *NOTRUN* Details
 
 ****** By IMO: *************
 
