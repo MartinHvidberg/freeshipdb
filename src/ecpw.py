@@ -93,7 +93,7 @@ class Store(object):
             dic_load = json.load(fil_load)
             fil_load.close()
         except:
-            print("Can't load data from file: {} \nPlease check if file is empty...".format(self._filen))
+            print("Can't load data from file: {} \nPlease check if file is empty, or bad json...".format(self._filen))
             return 221
         # Check some dic_load vitals...
         if isinstance(dic_load, dict):
@@ -202,9 +202,9 @@ class Store(object):
         if isinstance(store, dict):
             for keyi in store.keys():
                 iden = store[keyi]
-                print("<  iden:", str(type(iden)), keyi)
+                print("<  iden:", str(type(iden)), keyi, iden)
                 for keyj in iden.keys():
-                    print("<  k-v: ({}, {}) =  {}, {}".format(str(type(keyj)),str(type(iden[keyj])),iden.keyi[keyj]))
+                    print("<  k-v: ({}, {}) =  {}, {}".format(str(type(keyj)),str(type(iden[keyj])),keyj, iden[keyj]))
 
     # identity level commands
     def lst(self):
@@ -322,3 +322,9 @@ class Store(object):
             del self._base[str_ident][str_inner_key]
         except KeyError:
             pass  # The key wasen't there, nothing to delete, everybody is happy
+
+
+if __name__ == '__main__':
+
+    ecs = Store()
+    ecs.print_raw()
