@@ -10,30 +10,22 @@ def scrape_shipspot_imagepage(str_url, dic_ship):
     append it to the dic_ship,
     return the dic_ship"""
     print("GET more: {}".format(str_url))
-    print("*******************")
-
     r = http.request('GET', str_url)
     soup = bs(r.data, 'html.parser')
-
-    #print("soup: {}".format(soup.prettify()))
-    print("===================")
-
-    lst_tbls = [itm for itm in soup.findAll('table')
-                if ('Technical Data' in itm.text
-                and 'inbox_title' in str(itm))]
-    if lst_tbls and len(lst_tbls) > 0:
-
-
-
-
-        # for tbl in lst_tbls:
-        #     for itbl in tbl.findAll('table'):
-        #         print("# {} {} _ {}".format(str(type(itbl)), len(itbl), len(itbl.find_parents("table"))))#tbl.prettify()))
-        #         if '24,785' in itbl.text:
-        #             print("###")
-
-
-    print("*******************")
+    ##print("soup: {}".format(soup.prettify()))
+    # suck table with 'Vessel type'
+    lst_hit = soup.findAll("td", text="Vessel type:")
+    if lst_hit:
+        for row in lst_hit[0].parent.parent:
+            k,v = row.text.split(':', 1)
+            dic_ship[k] = v
+    # suck table with 'Class society'
+    lst_hit = soup.findAll("td", text="Class society:")
+    if lst_hit:
+        for row in lst_hit[0].parent.parent:
+            #print("Nice row: {}".format(row.prettify()))
+            k,v = row.text.split(':', 1)
+            dic_ship[k] = v
     return dic_ship
 
 def scrape_shipspot_page(str_url, dic_ships):

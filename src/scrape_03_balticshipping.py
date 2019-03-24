@@ -23,7 +23,7 @@ def scrape_balticshipping_page(str_url, dic_ships):
 
 if __name__ == '__main__':
 
-    str_url = "https://www.balticshipping.com/vessel/imo/9060730"
+    str_url = "https://www.balticshipping.com/vessel/imo/8888630"
 
     user_agent = {'user-agent': 'Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:65.0) Gecko/20100101 Firefox/65.0'}
     #http = urllib3.PoolManager(10, headers=user_agent)
