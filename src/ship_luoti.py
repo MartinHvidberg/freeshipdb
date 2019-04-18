@@ -18,7 +18,7 @@ def scan_(imo):
 
 def main(imo):
     lst_ret = list()  # Initialise list to return
-    print("Scanning for: {}".format(imo))
+    print("Scanning inet for: {}".format(imo))
     return lst_ret
 
 if __name__ == '__main__':

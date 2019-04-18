@@ -1,11 +1,25 @@
 
 import sys
 
+import datetime
 import psycopg2
 
 import ship_luoti
 import ship_show
 import ecpw  # The EC-password module (local copy)
+
+
+# Hardcoded constants
+DEBUG = False
+IMO = '5351894' # ''8917613' # '8888630' #
+LST_FLD = ['imo', 'mmsi', 'callsign', 'ship_name', 'ship_type', 'flag',
+           'ship_length', 'ship_width',
+           'ship_weight_gt', 'ship_weight_dw', 'ship_draught',
+           'ship_status', 'home_port', 'build_year', 'build_place',
+           'ship_owner', 'ship_operator', 'classification_society',
+           'former_names', 'info_source', 'info_update']
+KNOWN_SCRP_TABLES = ['vestra_scrp', 'shpnms_scrp']
+
 
 # Establist connection to DB
 ecs = ecpw.Store()
@@ -18,25 +32,14 @@ try:
                            database=db_database)
     with con.cursor() as cur:
         # Print PostgreSQL Connection properties
-        print("WHOAMI: {}".format(con.get_dsn_parameters()))
-        # Print PostgreSQL version
-        cur.execute("SELECT version();")
-        record = cur.fetchone()
-        print("Conn..:", record, "\n")
+        str_dsn = con.get_dsn_parameters()  # PostgreSQL Connection properties
+        cur.execute("SELECT version();")  # PostgreSQL version
+        str_ver = cur.fetchone()
+        if DEBUG:
+            print("WHOAMI {}:\n  Conn.: {}\n   Ver.: {}".format(__file__, str_dsn, str_ver))
 except (Exception, psycopg2.Error) as error:
     print("Error while connecting to PostgreSQL", error)
     sys.exit(999)
-
-
-# Hardcoded constants
-IMO = '9032800' # ''8917613' # '8888630' #
-LST_FLD = ['imo', 'mmsi', 'callsign', 'ship_name', 'ship_type', 'flag',
-           'ship_length', 'ship_width',
-           'ship_weight_gt', 'ship_weight_dw', 'ship_draught',
-           'ship_status', 'home_port', 'build_year', 'build_place',
-           'ship_owner', 'ship_operator', 'classification_society',
-           'former_names', 'info_source', 'info_update']
-KNOWN_SCRP_TABLES = ['vestra_scrp', 'shpnms_scrp']
 
 
 def redundant_dic(dic_cand, dic_reff):
@@ -177,6 +180,7 @@ def update_local_collect(imo):
     """ For the given imo
     Walk all known _scrp tables
     transfer all (new) records to the collect table. """
+    print("Scanning local db for: {}".format(imo))
 
     # get the _scrp data, include DELETE them from input table
     lst_all_scrps = list()
@@ -211,19 +215,25 @@ def update_local_mui(imo=''):
 
 def main(imo):
 
-    # 1 Look ship up in local data
+    # 1 Ship Look up in local data
+    dtt_start = datetime.datetime.now()
     update_local_collect(imo)  # Collect data from all available scrp tables
+    print("... Ship Look up in local data: {:.3} ms".format((datetime.datetime.now() - dtt_start).total_seconds()*1000))
 
     # 2 Ship Look up on the internet = ship_luoti
+    dtt_start = datetime.datetime.now()
     lst_soti = ship_luoti.main(imo)
+    print("... Ship Look up on the internet: {:.3} ms".format((datetime.datetime.now() - dtt_start).total_seconds()*1000))
 
 
     # 3 Compare, and maybe update, local data
 
 
     # 4 Present up-to-date ship data
+    dtt_start = datetime.datetime.now()
     update_local_mui(imo)  # Update Most Updated Info, based on all collected info
-    ship_show.main(imo)
+    ship_show.imo(con, imo)
+    print("... Present up-to-date ship data: {:.3} ms".format((datetime.datetime.now() - dtt_start).total_seconds()*1000))
 
 if __name__ == '__main__':
 
