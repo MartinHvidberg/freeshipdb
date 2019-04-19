@@ -1,2 +1,59 @@
 /.idea/
 sites.csv
+syntax: glob
+.idea/codeStyles/codeStyleConfig.xml
+.idea/dbnavigator.xml
+.idea/encodings.xml
+.idea/freeshipdb.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+data/IMO_Tuna_fishing.csv
+data/aa.html
+data/eci.7z
+data/eci_all_newly_scanned.7z
+.idea/codeStyles/Project.xml
+data/shpnms/shipnumbers_all.csv
+data/shpnms/shipnumbers_all.ods
+data/shpnms/shipnumbers_allcl2.csv
+data/shpnms/shipnumbers_allcln.csv
+data/shpnms/shipnumbers_allclnSEQ.7z
+doc/Check characters: IMO Number, Coden.htm
+doc/Check characters: IMO Number, Coden_files/oletus.css
+doc/MMSI_MID_Codes.html
+doc/MMSI_MID_Codes_files/1.png
+doc/MMSI_MID_Codes_files/44f49.css
+doc/MMSI_MID_Codes_files/css.css
+doc/MMSI_MID_Codes_files/e6701.js
+doc/MMSI_MID_Codes_files/eff97.js
+doc/MMSI_MID_Codes_files/font-awesome.css
+doc/MMSI_MID_Codes_files/log.png
+doc/Maritime Mobile Service Identity (MMSI) - Telecom ABC.html
+doc/Maritime Mobile Service Identity (MMSI) - Telecom ABC_files/cookieconsent.js
+doc/Maritime Mobile Service Identity (MMSI) - Telecom ABC_files/dark-bottom.css
+doc/Maritime Mobile Service Identity (MMSI) - Telecom ABC_files/lexicon.css
+doc/Maritime Mobile Service Identity (MMSI) - Telecom ABC_files/nav.css
+doc/Maritime Mobile Service Identity (MMSI) - Telecom ABC_files/nl24-16.gif
+doc/Maritime Mobile Service Identity (MMSI) - Telecom ABC_files/scripts.js
+doc/Maritime Mobile Service Identity (MMSI) - Telecom ABC_files/zoekbutton.gif
+doc/ROCKY, Bulk carrier, IMO 6602006 | Vessel details | BalticShipping.com.html
+doc/ROCKY, Bulk carrier, IMO 6602006 | Vessel details | BalticShipping.com_files/167192.jpg
+doc/ROCKY, Bulk carrier, IMO 6602006 | Vessel details | BalticShipping.com_files/23212.jpg
+doc/ROCKY, Bulk carrier, IMO 6602006 | Vessel details | BalticShipping.com_files/40769.jpg
+doc/ROCKY, Bulk carrier, IMO 6602006 | Vessel details | BalticShipping.com_files/975291.jpg
+doc/ROCKY, Bulk carrier, IMO 6602006 | Vessel details | BalticShipping.com_files/975294.jpg
+doc/ROCKY, Bulk carrier, IMO 6602006 | Vessel details | BalticShipping.com_files/arrow-right-light-gray.jpg
+doc/ROCKY, Bulk carrier, IMO 6602006 | Vessel details | BalticShipping.com_files/css.css
+doc/ROCKY, Bulk carrier, IMO 6602006 | Vessel details | BalticShipping.com_files/logo-print-slogan.png
+doc/ROCKY, Bulk carrier, IMO 6602006 | Vessel details | BalticShipping.com_files/logo-print.png
+doc/ROCKY, Bulk carrier, IMO 6602006 | Vessel details | BalticShipping.com_files/main.css
+doc/ROCKY, Bulk carrier, IMO 6602006 | Vessel details | BalticShipping.com_files/scripts.js
+doc/ROCKY, Bulk carrier, IMO 6602006 | Vessel details | BalticShipping.com_files/vendor.css
+doc/ROCKY, Bulk carrier, IMO 6602006 | Vessel details | BalticShipping.com_files/vendor.js
+src/__pycache__/ecpw.cpython-37.pyc
+src/__pycache__/ship_info_extractors.cpython-37.pyc
+src/__pycache__/ship_luoti.cpython-37.pyc
+src/__pycache__/ship_show.cpython-37.pyc
+src/__pycache__/ship_update.cpython-37.pyc
+src/shipnumbers.csv
