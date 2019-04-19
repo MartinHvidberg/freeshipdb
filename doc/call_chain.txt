@@ -22,8 +22,6 @@ Single Ship Update and Report - SUR
     ; def homogene_names(lst_in, source_id):
 
 	Xtra small helpers
-    ; def redundant_dic(dic_cand, dic_reff):
-    ; def lod_remove_duplicates(lst_in):
     ; def substitute(dic_in, str_a, str_b):
 
 
@@ -34,3 +32,8 @@ Single Ship Update and Report - SUR
 --- ship_show.py
     ; def imo(con, imo):
     ; def mmsi(mmsi):
+
+
+--- ship_ec_helpers.py
+    ; def redundant_dic(dic_cand, dic_reff):
+    ; def lod_remove_duplicates(lst_in):

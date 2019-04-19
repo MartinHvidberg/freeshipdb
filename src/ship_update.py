@@ -8,6 +8,8 @@ import ship_luoti
 import ship_show
 import ecpw  # The EC-password module (local copy)
 
+import ship_ec_helpers as ec
+
 
 # Hardcoded constants
 DEBUG = False
@@ -40,34 +42,6 @@ try:
 except (Exception, psycopg2.Error) as error:
     print("Error while connecting to PostgreSQL", error)
     sys.exit(999)
-
-
-def redundant_dic(dic_cand, dic_reff):
-    """ If dic_cand hold informations not represented in dic_reff,
-    then return False, else return True
-    :param dic_cand: dictionary
-    :param dic_reff: dictionaty
-    :return: True | False
-    """
-    for key_c in dic_cand.keys():
-        if not key_c in dic_reff.keys():
-            return False
-        else:
-            if dic_cand[key_c] != dic_reff[key_c]:
-                return False
-    return True
-
-def lod_remove_duplicates(lst_in):
-    lst_ret = list()
-    for itmi in lst_in:
-        bol_new = True  # Assumed new, until proven redundant
-        for itmo in lst_ret:
-            if redundant_dic(itmo, itmi):
-                bol_new = False
-                continue
-        if bol_new:
-            lst_ret.append(itmi)
-    return lst_ret
 
 
 def get_fieldnames_from_table(table, schema='ais'):
@@ -176,7 +150,7 @@ def homogene_names(lst_in, source_id):
     return lst_ret
 
 
-def update_local_collect(imo):
+def ship_lois(imo):
     """ For the given imo
     Walk all known _scrp tables
     transfer all (new) records to the collect table. """
@@ -194,7 +168,7 @@ def update_local_collect(imo):
         ##print("scpret {} {} {}".format(scrp_source, len(lst_scrp), lst_scrp))
         lst_all_scrps.extend(lst_scrp)  # add to the main list
         del lst_flds_source, lst_scrp  # clean before looping ...
-    lst_all_scrps = lod_remove_duplicates(lst_all_scrps)  # Remove duplicates
+    lst_all_scrps = ec.lod_remove_duplicates(lst_all_scrps)  # Remove duplicates
     ##print("scpret ALL         {}".format(len(lst_all_scrps)))
 
     # get existing collect data
@@ -204,8 +178,9 @@ def update_local_collect(imo):
 
     # Evaluate scrapes for potential adding to collect
     for dic_cand in lst_all_scrps:
-        if not any ([redundant_dic(dic_cand, dic_coll) for dic_coll in lst_coll]):
+        if not any ([ec.redundant_dic(dic_cand, dic_coll) for dic_coll in lst_coll]):
             insert_dic_in_coll(dic_cand)
+
 
 def update_local_mui(imo=''):
     """ For the given imo
@@ -213,12 +188,13 @@ def update_local_mui(imo=''):
     (re)write most updated info to _mui table"""
     pass
 
+
 def main(imo):
 
-    # 1 Ship Look up in local data
+    # 1 Ship Look up in Scrapes
     dtt_start = datetime.datetime.now()
-    update_local_collect(imo)  # Collect data from all available scrp tables
-    print("... Ship Look up in local data: {:.3} ms".format((datetime.datetime.now() - dtt_start).total_seconds()*1000))
+    ship_lois(imo)  # Look Up In Scrapes, i.e. Collect data from all available scrp tables
+    print("... Ship Look up in Scrapes: {:.3} ms".format((datetime.datetime.now() - dtt_start).total_seconds()*1000))
 
     # 2 Ship Look up on the internet = ship_luoti
     dtt_start = datetime.datetime.now()
