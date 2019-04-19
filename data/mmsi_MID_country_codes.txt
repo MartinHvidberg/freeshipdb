@@ -1,0 +1,482 @@
+
+201 	Albania (Republic of)
+202 	Andorra (Principality of)
+203 	Austria
+204 	Azores
+205 	Belgium
+206 	Belarus (Republic of)
+207 	Bulgaria (Republic of)
+208 	Vatican City State
+209, 210 	Cyprus (Republic of)
+211 	Germany (Federal Republic of)
+212 	Cyprus (Republic of)
+213 	Georgia
+214 	Moldova (Republic of)
+215 	Malta
+216 	Armenia (Republic of)
+218 	Germany (Federal Republic of)
+219, 220 	Denmark
+224, 225 	Spain
+226, 227, 228 	France
+230 	Finland
+231 	Faroe Islands
+232, 233, 234, 235 	United Kingdom of Great Britain and Northern Ireland
+236 	Gibraltar
+237 	Greece
+238 	Croatia (Republic of)
+239, 240, 241 	Greece
+242 	Morocco (Kingdom of)
+243 	Hungary (Republic of)
+244, 245, 246 	Netherlands (Kingdom of the)
+247 	Italy
+248, 249 	Malta
+250 	Ireland
+251 	Iceland
+252 	Liechtenstein (Principality of)
+253 	Luxembourg
+254 	Monaco (Principality of)
+255 	Madeira
+256 	Malta
+257, 258, 259 	Norway
+261 	Poland (Republic of)
+262		Montenegro	DEL	deleted
+263 	Portugal
+264 	Romania
+265, 266 	Sweden
+267 	Slovak Republic
+268 	San Marino (Republic of)
+269 	Switzerland (Confederation of)
+270 	Czech Republic
+271 	Turkey
+272 	Ukraine
+273 	Russian Federation
+274 	The Former Yugoslav Republic of Macedonia
+275 	Latvia (Republic of)
+276 	Estonia (Republic of)
+277 	Lithuania (Republic of)
+278 	Slovenia (Republic of)
+279 	Serbia (Republic of)
+301 	Anguilla
+303 	Alaska (State of)
+304, 305 	Antigua and Barbuda
+306 	Netherlands Antilles
+307 	Aruba
+308, 309 	Bahamas (Commonwealth of the)
+310 	Bermuda
+311 	Bahamas (Commonwealth of the)
+312 	Belize
+314 	Barbados
+316 	Canada
+319 	Cayman Islands
+321 	Costa Rica
+323 	Cuba
+325 	Dominica (Commonwealth of)
+327 	Dominican Republic
+329 	Guadeloupe (French Department of)
+330 	Grenada
+331 	Greenland
+332 	Guatemala (Republic of)
+334 	Honduras (Republic of)
+336 	Haiti (Republic of)
+338 	United States of America
+339 	Jamaica
+341 	Saint Kitts and Nevis (Federation of)
+343 	Saint Lucia
+345 	Mexico
+347 	Martinique (French Department of)
+348 	Montserrat
+350 	Nicaragua
+351, 352, 353, 354 	Panama (Republic of)
+355,356, 357 	Panama (Republic of)
+358 	Puerto Rico
+359 	El Salvador (Republic of)
+361 	Saint Pierre and Miquelon (Territorial Collectivity of)
+362 	Trinidad and Tobago
+364 	Turks and Caicos Islands
+366, 367, 368, 369 	United States of America
+370, 371, 372 	Panama (Republic of)
+375, 376, 377 	Saint Vincent and the Grenadines
+378 	British Virgin Islands
+379 	United States Virgin Islands
+401 	Afghanistan
+403 	Saudi Arabia (Kingdom of)
+405 	Bangladesh (People's Republic of)
+408 	Bahrain (Kingdom of)
+410 	Bhutan (Kingdom of)
+412, 413 	China (People's Republic of)
+416 	Taiwan (Province of China)
+417 	Sri Lanka (Democratic Socialist Republic of)
+419 	India (Republic of)
+422 	Iran (Islamic Republic of)
+423 	Azerbaijani Republic
+425 	Iraq (Republic of)
+428 	Israel (State of)
+431, 432 	Japan
+434 	Turkmenistan
+436 	Kazakhstan (Republic of)
+437 	Uzbekistan (Republic of)
+438 	Jordan (Hashemite Kingdom of)
+440, 441 	Korea (Republic of)
+443 	Palestine (In accordance with Resolution 99 Rev. Antalya, 2006)
+445 	Democratic People's Republic of Korea
+447 	Kuwait (State of)
+450 	Lebanon
+451 	Kyrgyz Republic
+MID 	Allocated to
+453 	Macao (Special Administrative Region of China)
+455 	Maldives (Republic of)
+457 	Mongolia
+459 	Nepal (Federal Democratic Republic of)
+461 	Oman (Sultanate of)
+463 	Pakistan (Islamic Republic of)
+466 	Qatar (State of)
+468 	Syrian Arab Republic
+470 	United Arab Emirates
+473, 475 	Yemen (Republic of)
+477 	Hong Kong (Special Administrative Region of China)
+478 	Bosnia and Herzegovina
+501 	Adelie Land
+503 	Australia
+506 	Myanmar (Union of)
+508 	Brunei Darussalam
+510 	Micronesia (Federated States of)
+511 	Palau (Republic of)
+512 	New Zealand
+514, 515 	Cambodia (Kingdom of)
+516 	Christmas Island (Indian Ocean)
+518 	Cook Islands
+520 	Fiji (Republic of)
+523 	Cocos (Keeling) Islands
+525 	Indonesia (Republic of)
+529 	Kiribati (Republic of)
+531 	Lao People's Democratic Republic
+533 	Malaysia
+536 	Northern Mariana Islands (Commonwealth of the)
+538 	Marshall Islands (Republic of the)
+540 	New Caledonia
+542 	Niue
+544 	Nauru (Republic of)
+546 	French Polynesia
+548 	Philippines (Republic of the)
+553 	Papua New Guinea
+555 	Pitcairn Island
+557 	Solomon Islands
+559 	American Samoa
+561 	Samoa (Independent State of)
+563, 564, 565 	Singapore (Republic of)
+567 	Thailand
+570 	Tonga (Kingdom of)
+572 	Tuvalu
+574 	Viet Nam (Socialist Republic of)
+576 	Vanuatu (Republic of)
+578 	Wallis and Futuna Islands
+601 	South Africa (Republic of)
+603 	Angola (Republic of)
+605 	Algeria (People's Democratic Republic of)
+607 	Saint Paul and Amsterdam Islands
+608 	Ascension Island
+609 	Burundi (Republic of)
+610 	Benin (Republic of)
+611 	Botswana (Republic of)
+612 	Central African Republic
+613 	Cameroon (Republic of)
+615 	Congo (Republic of the)
+616 	Comoros (Union of the)
+617 	Cape Verde (Republic of)
+618 	Crozet Archipelago
+619 	Côte d'Ivoire (Republic of)
+621 	Djibouti (Republic of)
+622 	Egypt (Arab Republic of)
+624 	Ethiopia (Federal Democratic Republic of)
+625 	Eritrea
+626 	Gabonese Republic
+627 	Ghana
+629 	Gambia (Republic of the)
+630 	Guinea-Bissau (Republic of)
+631 	Equatorial Guinea (Republic of)
+632 	Guinea (Republic of)
+633 	Burkina Faso
+634 	Kenya (Republic of)
+635 	Kerguelen Islands
+636, 637 	Liberia (Republic of)
+642 	Socialist People's Libyan Arab Jamahiriya
+644 	Lesotho (Kingdom of)
+645 	Mauritius (Republic of)
+647 	Madagascar (Republic of)
+649 	Mali (Republic of)
+650 	Mozambique (Republic of)
+654 	Mauritania (Islamic Republic of)
+655 	Malawi
+656 	Niger (Republic of the)
+657 	Nigeria (Federal Republic of)
+659 	Namibia (Republic of)
+660 	Reunion (French Department of)
+661 	Rwanda (Republic of)
+662 	Sudan (Republic of the)
+663 	Senegal (Republic of)
+664 	Seychelles (Republic of)
+665 	Saint Helena
+666 	Somali Democratic Republic
+667 	Sierra Leone
+668 	Sao Tome and Principe (Democratic Republic of)
+669 	Swaziland (Kingdom of)
+670 	Chad (Republic of)
+671 	Togolese Republic
+672 	Tunisia
+674 	Tanzania (United Republic of)
+675 	Uganda (Republic of)
+676 	Democratic Republic of the Congo
+677 	Tanzania (United Republic of)
+678 	Zambia (Republic of)
+679 	Zimbabwe (Republic of)
+701 	Argentine Republic
+710 	Brazil (Federative Republic of)
+720 	Bolivia (Plurinational State of)
+725 	Chile
+730 	Colombia (Republic of)
+735 	Ecuador
+740 	Falkland Islands (Malvinas)
+745 	Guiana (French Department of)
+750 	Guyana
+755 	Paraguay (Republic of)
+760 	Peru
+765 	Suriname (Republic of)
+770 	Uruguay (Eastern Republic of)
+775 	Venezuela (Bolivarian Republic of)
+
+
+970		Search and Rescue Transmitter
+
+Adelie Land 	501
+Afghanistan 	401
+Alaska (State of) 	303
+Albania (Republic of) 	201
+Algeria (People's Democratic Republic of) 	605
+American Samoa 	559
+Andorra (Principality of) 	202
+Angola (Republic of) 	603
+Anguilla 	301
+Antigua and Barbuda 	304, 305
+Argentine Republic 	701
+Armenia (Republic of) 	216
+Aruba 	307
+Ascension Island 	608
+Australia 	503
+Austria 	203
+Azerbaijani Republic 	423
+Azores 	204
+Bahamas (Commonwealth of the) 	308, 309, 311
+Bahrain (Kingdom of) 	408
+Bangladesh (People's Republic of) 	405
+Barbados 	314
+Belarus (Republic of) 	206
+Belgium 	205
+Belize 	312
+Benin (Republic of) 	610
+Bermuda 	310
+Bhutan (Kingdom of) 	410
+Bolivia (Republic of) 	720	DEL	deleted
+Bosnia and Herzegovina 	478
+Botswana (Republic of) 	611
+Brazil (Federative Republic of) 	710
+British Virgin Islands 	378
+Brunei Darussalam 	508
+Bulgaria (Republic of) 	207
+Burkina Faso 	633
+Burundi (Republic of) 	609
+Cambodia (Kingdom of) 	514, 515
+Cameroon (Republic of) 	613
+Canada 	316
+Cape Verde (Republic of) 	617
+Cayman Islands 	319
+Central African Republic 	612
+Chad (Republic of) 	670
+Chile 	725
+China (People's Republic of) 	412, 413
+Christmas Island (Indian Ocean) 	516
+Cocos (Keeling) Islands 	523
+Colombia (Republic of) 	730
+Comoros (Union of the) 	616
+Congo (Republic of the) 	615
+Cook Islands 	518
+Costa Rica 	321
+Côte d'Ivoire (Republic of) 	619
+Croatia (Republic of) 	238
+Crozet Archipelago 	618
+Cuba 	323
+Cyprus (Republic of) 	209, 210, 212
+Czech Republic 	270
+Democratic People's Republic of Korea 	445
+Democratic Republic of the Congo 	676
+Denmark 	219, 220
+Djibouti (Republic of) 	621
+Dominica (Commonwealth of) 	325
+Dominican Republic 	327
+Ecuador 	735
+Egypt (Arab Republic of) 	622
+El Salvador (Republic of) 	359
+Equatorial Guinea (Republic of) 	631
+Eritrea 	625
+Estonia (Republic of) 	276
+Ethiopia (Federal Democratic Republic of) 	624
+Falkland Islands (Malvinas) 	740
+Faroe Islands 	231
+Fiji (Republic of) 	520
+Finland 	230
+France 	226, 227, 228
+French Polynesia 	546
+Gabonese Republic 	626
+Gambia (Republic of the) 	629
+Georgia 	213
+Germany (Federal Republic of) 	211, 218
+Ghana 	627
+Gibraltar 	236
+Greece 	237, 239, 240
+Greenland 	331
+Grenada 	330
+Guadeloupe (French Department of) 	329
+Guatemala (Republic of) 	332
+Guiana (French Department of) 	745
+Guinea (Republic of) 	632
+Guinea-Bissau (Republic of) 	630
+Guyana 	750
+Haiti (Republic of) 	336
+Honduras (Republic of) 	334
+Hong Kong (Special Administrative Region of China) 	477
+Hungary (Republic of) 	243
+Iceland 	251
+India (Republic of) 	419
+Indonesia (Republic of) 	525
+Iran (Islamic Republic of) 	422
+Iraq (Republic of) 	425
+Ireland 	250
+Israel (State of) 	428
+Italy 	247
+Jamaica 	339
+Japan 	431, 432
+Jordan (Hashemite Kingdom of) 	438
+Kazakhstan (Republic of) 	436
+Kenya (Republic of) 	634
+Kerguelen Islands 	635
+Kiribati (Republic of) 	529
+Korea (Republic of) 	440, 441
+Kuwait (State of) 	447
+Kyrgyz Republic 	451
+Lao People's Democratic Republic 	531
+Latvia (Republic of) 	275
+Lebanon 	450
+Lesotho (Kingdom of) 	644
+Liberia (Republic of) 	636, 637
+Liechtenstein (Principality of) 	252
+Lithuania (Republic of) 	277
+Luxembourg 	253
+Macao (Special Administrative Region of China) 	453
+Madagascar (Republic of) 	647
+Madeira 	255
+Malawi 	655
+Malaysia 	533
+Maldives (Republic of) 	455
+Mali (Republic of) 	649
+Malta 	215, 248, 249, 256
+Marshall Islands (Republic of the) 	538
+Martinique (French Department of) 	347
+Mauritania (Islamic Republic of) 	654
+Mauritius (Republic of) 	645
+Mexico 	345
+Micronesia (Federated States of) 	510
+Moldova (Republic of) 	214
+Monaco (Principality of) 	254
+Mongolia 	457
+Montenegro (Republic of) 	262
+Montserrat 	348
+Morocco (Kingdom of) 	242
+Mozambique (Republic of) 	650
+Myanmar (Union of) 	506
+Namibia (Republic of) 	659
+Nauru (Republic of) 	544
+Nepal 	459	DEL	deleted
+Netherlands (Kingdom of the) 	244, 245, 246
+Netherlands Antilles 	306
+New Caledonia 	540
+New Zealand 	512
+Nicaragua 	350
+Niger (Republic of the) 	656
+Nigeria (Federal Republic of) 	657
+Niue 	542
+Northern Mariana Islands (Commonwealth of the) 	536
+Norway 	257, 258, 259
+Oman (Sultanate of) 	461
+Pakistan (Islamic Republic of) 	463
+Palau (Republic of) 	511
+Palestine (In accordance with Resolution 99 Rev. Antalya, 2006) 	443
+Panama (Republic of) 	351, 352, 353, 354, 355,356, 357, 371, 372
+Papua New Guinea 	553
+Paraguay (Republic of) 	755
+Peru 	760
+Philippines (Republic of the) 	548
+Pitcairn Island 	555
+Poland (Republic of) 	261
+Portugal 	263
+Puerto Rico 	358
+Qatar (State of) 	466
+Reunion (French Department of) 	660
+Romania 	264
+Russian Federation 	273
+Rwanda (Republic of) 	661
+Saint Helena 	665
+Saint Kitts and Nevis (Federation of) 	341
+Saint Lucia 	343
+Saint Paul and Amsterdam Islands 	607
+Saint Pierre and Miquelon (Territorial Collectivity of) 	361
+Saint Vincent and the Grenadines 	375, 376, 377
+Samoa (Independent State of) 	561
+San Marino (Republic of) 	268
+Sao Tome and Principe (Democratic Republic of) 	668
+Saudi Arabia (Kingdom of) 	403
+Senegal (Republic of) 	663
+Serbia (Republic of) 	279
+Seychelles (Republic of) 	664
+Sierra Leone 	667
+Singapore (Republic of) 	563, 564, 565
+Slovak Republic 	267
+Slovenia (Republic of) 	278
+Socialist People's Libyan Arab Jamahiriya 	642
+Solomon Islands 	557
+Somali Democratic Republic 	666
+South Africa (Republic of) 	601
+Spain 	224, 225
+Sri Lanka (Democratic Socialist Republic of) 	417
+Sudan (Republic of the) 	662
+Suriname (Republic of) 	765
+Swaziland (Kingdom of) 	669
+Sweden 	265, 266
+Switzerland (Confederation of) 	269
+Syrian Arab Republic 	468
+Taiwan (Province of China) 	416
+Tanzania (United Republic of) 	674, 677
+Thailand 	567
+The Former Yugoslav Republic of Macedonia 	274
+Togolese Republic 	671
+Tonga (Kingdom of) 	570
+Trinidad and Tobago 	362
+Tunisia 	672
+Turkey 	271
+Turkmenistan 	434
+Turks and Caicos Islands 	364
+Tuvalu 	572
+Uganda (Republic of) 	675
+Ukraine 	272
+United Arab Emirates 	470
+United Kingdom of Great Britain and Northern Ireland 	232, 233, 234, 235
+United States Virgin Islands 	379
+United States of America 	338, 366, 367, 368, 369
+Uruguay (Eastern Republic of) 	770
+Uzbekistan (Republic of) 	437
+Vanuatu (Republic of) 	576
+Vatican City State 	208
+Venezuela (Bolivarian Republic of) 	775
+Viet Nam (Socialist Republic of) 	574
+Wallis and Futuna Islands 	578
+Yemen (Republic of) 	473, 475
+Zambia (Republic of) 	678
+Zimbabwe (Republic of) 	679

@@ -1,0 +1,24 @@
+Navigating the Parse Tree
+
+If you want to know how to navigate the tree please see the official documentation
+
+There you can read about the following things:
+
+Going down
+        Navigating using tag names
+        .contents and .children
+        .descendants
+        .string
+        .strings and stripped_strings
+
+Going up
+        .parent
+        .parents
+
+Going sideways
+        .next_sibling and .previous_sibling
+        .next_siblings and .previous_siblings
+
+Going back and forth
+        .next_element and .previous_element
+        .next_elements and .previous_elements
