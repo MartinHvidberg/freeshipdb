@@ -22,12 +22,3 @@ http://www.shipspotting.com/ships/ship.php?imo=5383304
 
 ?
 
-
-
-****** DB: *************
-
-user="mh",
-password="password has been changed since the leak...",
-host="127.0.0.1",
-port="5432",
-database="snaps"
