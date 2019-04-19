@@ -1,0 +1,36 @@
+
+Bulck collection -
+
+Single Ship Update and Report - SUR
+
+--- ship_update.py
+
+	Main parts
+    ; def update_local_collect(imo):
+    * import ship_luoti
+    ; def update_local_mui(imo=''):
+    * import ship_show
+
+    SQL related
+    ; def get_fieldnames_from_table(table, schema='ais'):  # * get the field names
+    ; def get_data_from_table(key, val, table, lst_fld, schema='ais'):  """ Get the relevant row(s) from a table """
+    ; def delete_data_from_table(key, val, table, schema='ais'):  """ REMOVE the relevant rows from the table """
+    ; def insert_dic_in_coll(dic_cand):  Inserts the new candidates (that have been checked elsewhere) into 'collection'
+
+    Ship data handlers
+    ; def check_swap_length_width(dic_in):  """ Check if ship is wider then long, then swap meassures """
+    ; def homogene_names(lst_in, source_id):
+
+	Xtra small helpers
+    ; def redundant_dic(dic_cand, dic_reff):
+    ; def lod_remove_duplicates(lst_in):
+    ; def substitute(dic_in, str_a, str_b):
+
+
+--- ship_luoti.py
+    ; def scan_(imo):
+
+
+--- ship_show.py
+    ; def imo(con, imo):
+    ; def mmsi(mmsi):
