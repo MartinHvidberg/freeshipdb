@@ -1,15 +1,18 @@
 
 import sys
 
+import ship_db_access as db
 
-def imo(con, imo):
+
+def imo(imo):
         print('Showing info for IMO: {}'.format(imo))
         table = "ship_collect"
-        str_sql = "select * from ais.{} where imo = {};".format(table, imo)
-        # print('\n', str_sql)
-        with con.cursor() as cur:
-            cur.execute(str_sql)
-            lst_hit = cur.fetchall()
+        # str_sql = "select * from ais.{} where imo = {};".format(table, imo)
+        # # print('\n', str_sql)
+        # with con.cursor() as cur:
+        #     cur.execute(str_sql)
+        #     lst_hit = cur.fetchall()
+        lst_hit = db.get_raw_rows_from_table('imo', imo, table)
         for hit in lst_hit:
             print("scol: {}".format(hit))
         lst_ret = [tok[0] for tok in lst_hit]
