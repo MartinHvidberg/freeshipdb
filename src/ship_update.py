@@ -28,14 +28,14 @@ def main(imo):
     ship_luis.ship_luis(imo)  # Look Up In Scrapes, i.e. Collect data from all available scrp tables
     print("... Ship Look up in Scrapes: {:.3} ms".format((datetime.datetime.now() - dtt_start).total_seconds()*1000))
 
-    # 2 LUOTI: Look Up On The Internet, fill in _collected
+    # 2 LUOTI: Look Up On The Internet, fill in _collected. This makes more sence with imo, as it's the more widely searchable identifyer
     dtt_start = datetime.datetime.now()
     lst_soti = ship_luoti.main(imo)
     print("... Ship Look up on the internet: {:.3} ms".format((datetime.datetime.now() - dtt_start).total_seconds()*1000))
 
-    # 3 ULMUI: Update Local Most Updated Info, from _collected
+    # 3 ULMUI: Update Local Most Updated Info, from _collected. This makes more sence with mmsi, as it's a more specific identifyer
     dtt_start = datetime.datetime.now()
-    ship_ulmui.update_local_mui(imo)  # Update Most Updated Info, based on all collected info
+    ship_ulmui.update_local_mui(mmsi)  # Update Most Updated Info, based on all collected info
     print("... Present up-to-date ship data: {:.3} ms".format((datetime.datetime.now() - dtt_start).total_seconds()*1000))
 
     # 4 SHOW: Present up-to-date ship data

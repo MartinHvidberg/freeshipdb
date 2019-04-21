@@ -30,7 +30,8 @@ def get_def_lines(str_fn):
 for root, dirs, files in os.walk("."):
     path = root.split(os.sep)
     print((len(path) - 1) * '---', os.path.basename(root))
-    for file in files:
+    for file in sorted(files):
+        #print("FILE:", file)
         if file.endswith('.py'):
             print(len(path) * '---', file)
             for impor in get_import_lines(file):

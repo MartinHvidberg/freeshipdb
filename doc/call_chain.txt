@@ -1,39 +1,34 @@
-
-Bulck collection -
-
-Single Ship Update and Report - SUR
-
 --- ship_update.py
-
-	Main parts
-    ; def update_local_collect(imo):
-    * import ship_luoti
-    ; def update_local_mui(imo=''):
+    * import ship_luis  # Look Up In Scrapes, fill in _collected
+    * import ship_luoti  # Look Up On The Internet, fill in _collected
+    * import ship_ulmui  # Update Local Most Updated Info, from _collected
     * import ship_show
+    ; def main(imo):
 
-    SQL related
-    ; def get_fieldnames_from_table(table, schema='ais'):  # * get the field names
-    ; def get_data_from_table(key, val, table, lst_fld, schema='ais'):  """ Get the relevant row(s) from a table """
-    ; def delete_data_from_table(key, val, table, schema='ais'):  """ REMOVE the relevant rows from the table """
-    ; def insert_dic_in_coll(dic_cand):  Inserts the new candidates (that have been checked elsewhere) into 'collection'
-
-    Ship data handlers
-    ; def check_swap_length_width(dic_in):  """ Check if ship is wider then long, then swap meassures """
+--- ship_luis.py
+    * import ship_db_access as db
+    * import ship_ec_helpers as ec
+    ; def check_swap_length_width(dic_in):
     ; def homogene_names(lst_in, source_id):
-
-	Xtra small helpers
     ; def substitute(dic_in, str_a, str_b):
-
+    ; def ship_luis(imo):
 
 --- ship_luoti.py
     ; def scan_(imo):
-
+    ; def main(imo):
 
 --- ship_show.py
-    ; def imo(con, imo):
+    * import ship_db_access as db
+    ; def imo(imo):
     ; def mmsi(mmsi):
-
 
 --- ship_ec_helpers.py
     ; def redundant_dic(dic_cand, dic_reff):
     ; def lod_remove_duplicates(lst_in):
+
+--- ship_db_access.py
+    ; def get_raw_rows_from_table(key, val, table, schema='ais'):
+    ; def get_fieldnames_from_table(table, schema='ais'):
+    ; def get_data_from_table(key, val, table, lst_fld, schema='ais'):
+    ; def delete_data_from_table(key, val, table, schema='ais'):
+    ; def insert_dic_in_coll(dic_cand):
