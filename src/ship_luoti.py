@@ -53,11 +53,9 @@ def scan_marinetraffic_com(id, mode='imo'):
     # Get 'General'
 
     for div in soup.findAll("div", {"id": "details_wiki_accordion"}):
-
         for hfour in div.findAll('h4'):
             if hfour.get_text() == 'General':
                 for span in hfour.parent.parent.parent.findAll('span'):
-                    #print("======\n{}".format(span.prettify()))
                     kv = [tok.strip() for tok in span.get_text().strip().split(':')]
                     if len(kv) == 2:
                         dic_specs[kv[0].strip().rstrip(':').strip().lower()] = kv[1].strip()

@@ -1,7 +1,19 @@
+
+""" A number of semi-independent functions,
+each designed to scrape ship info from a specific web site.
+It would be nice if there were only one, but sites are uneven things ...
+
+Each function should receive a text-string with the full html of a web page, about one ship
+and a dictionary (maybe empty) to put data into, and return.
+Each function returns the dictionary, with the relevant info added, semi-cleaned. """
+
+
 from bs4 import BeautifulSoup as bs
 
-def esi_vt(rdata):
-    dic_ret = dict()
+# VesselTracker
+def esi_vt(rdata, dic_ret=None):
+    if dic_ret == None:
+        dic_ret = dict()
     soup = bs(rdata, 'html.parser')
     # Ship name
     try:
