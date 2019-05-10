@@ -1,4 +1,10 @@
-﻿select imo, mmsi, count(*)
+﻿-- only IMO count
+select imo, count(*)
+  from ais.ship_collect
+  group by imo
+  order by count(*) desc
+;
+select imo, mmsi, count(*)
   from ais.ship_collect
   group by imo, mmsi
   order by count(*) desc
@@ -27,5 +33,5 @@ select mmsi, count(*)
 
 select *
   from ais.ship_collect
-  where mmsi = 666000001
+  where imo = 9496848
 ;

@@ -1,30 +1,30 @@
-﻿-- Table: ais.ship_status
+﻿-- Table: ais.dom_ship_status
 
--- DROP TABLE ais.ship_status;
+-- DROP TABLE ais.dom_ship_status;
 
-CREATE TABLE ais.ship_status
+CREATE TABLE ais.dom_ship_status
 (
-  ship_status_num integer,
-  ship_status_txt character varying
+  info_status_num integer,
+  info_status_txt character varying
 )
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE ais.ship_status
+ALTER TABLE ais.dom_ship_status
   OWNER TO g_geoint_a;
-COMMENT ON TABLE ais.ship_status
+COMMENT ON TABLE ais.dom_ship_status
   IS 'domain';
 
 
-INSERT INTO ais.ship_status (ship_status_num, ship_status_txt) VALUES
-    (0, 'Ordered'),
-    (1, 'Delivered'),
-    (2, 'Active'),
-    (3, 'Active'),
-    (4, 'Active'),
-    (5, 'Active'),
-    (6, 'Active'),
-    (7, 'Missing'),
-    (8, 'Sunk'),
+INSERT INTO ais.dom_ship_status (info_status_num, info_status_txt) VALUES
+    (0, 'Unknown'),  -- We have no information
+    (1, 'Undefined'),  -- We have info, but it do not match any of the allowed values
+    (2, 'Ordered'),  -- Shipyard is building it
+    (3, 'Delivered'),  -- Not yet in service
+    (4, 'Active'),  -- In service
+    (5, 'inactive, but operative'),  -- Hotelship, etc
+    (6, 'Missing'),  -- Whereabouts unknown
+    (7, 'Damaged, inoperative'),  -- Firedamaged, etc
+    (8, 'Sunk, inoperative'),
     (9, 'Scrapped')
 ;

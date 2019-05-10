@@ -96,3 +96,12 @@ def esi_marinetraffic_com(byt_html, dic_specs):
                         dic_specs[kv[0].strip().rstrip(':').strip().lower()] = kv[1].strip()
 
     return dic_specs
+
+
+# www.balticshipping.com
+def esi_balticshipping_com(byt_html, dic_specs):
+    soup = bs(byt_html, 'html.parser')
+    #print(soup.prettify())
+    for div in soup.findAll("div"):#, {"class": "panel-body"}):
+        pass#print("\n------ DIV -------------\n {}".format(div))
+    return dic_specs
