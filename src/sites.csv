@@ -1,1 +1,6 @@
 "https://", "www.vesseltracker.com/en/Ships/", ".html"
+-- https://www.myshiptracking.com/vessels
+-- https://www.fleetmon.com/vessels/
+-- https://www.marinetraffic.com/en/data/?asset_type=vessels&columns=flag,shipname,photo,recognized_next_port,reported_eta,reported_destination,current_port,imo,ship_type,show_on_live_map,time_of_latest_position,lat_of_latest_position,lon_of_latest_position
+-- https://www.vesselfinder.com/vessels
+-- http://alltrack.org/
